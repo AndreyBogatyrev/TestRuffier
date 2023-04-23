@@ -9,18 +9,6 @@ window.move(T.win_x, T.win_y)
 window.resize(T.win_width, T.win_height)
 window.setWindowTitle(T.txt_title)
 
-# winner = QLabel('Так можно создать текст')
-# winner.setText('Создать новый текст')
-# winner.text() -- получить текст
-
-# button = QPushButton('Текст тут')
-
-# v_line = QVBoxLayout()
-# v_line.addWidget(winner, alignment = Qt.AlignCenter)
-# v_line.addWidget(button, alignment = Qt.AlignCenter)
-
-# window.setLayout(v_line)
-
 LV1 = QVBoxLayout()
 fioText = QLabel(T.txt_name)
 ageText = QLabel(T.txt_age)
