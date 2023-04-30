@@ -1,5 +1,5 @@
 from PyQt5.QtCore import Qt 
-from PyQt5.QtWidgets import QWidget, QLabel, QVBoxLayout, QPushButton, QApplication, QHBoxLayout
+from PyQt5.QtWidgets import QWidget, QLabel, QVBoxLayout, QPushButton, QLineEdit, QHBoxLayout
 import instr as S
 from final_win import FinalWin
 
@@ -29,14 +29,25 @@ class TestWin(QWidget):
         self.buttoninst3 = QPushButton(S.txt_starttest3)
         self.buttonresult = QPushButton(S.txt_sendresults)
 
+        self.editName = QLineEdit(S.txt_hintname)
+        self.editAge = QLineEdit(S.txt_hintage)
+        self.edit1 = QLineEdit(S.txt_hinttest1)
+        self.edit2 = QLineEdit(S.txt_hinttest2)
+        self.edit3 = QLineEdit(S.txt_hinttest3)
+
         self.LV1.addWidget(self.fioText, alignment=Qt.AlignLeft)
+        self.LV1.addWidget(self.editName, alignment=Qt.AlignLeft)
         self.LV1.addWidget(self.ageText, alignment=Qt.AlignLeft)
+        self.LV1.addWidget(self.editAge, alignment=Qt.AlignLeft)
         self.LV1.addWidget(self.inst1, alignment=Qt.AlignLeft)
         self.LV1.addWidget(self.buttoninst1, alignment=Qt.AlignLeft)
+        self.LV1.addWidget(self.edit1, alignment=Qt.AlignLeft)
         self.LV1.addWidget(self.inst2, alignment=Qt.AlignLeft)
         self.LV1.addWidget(self.buttoninst2, alignment=Qt.AlignLeft)
+        self.LV1.addWidget(self.edit2, alignment=Qt.AlignLeft)
         self.LV1.addWidget(self.inst3, alignment=Qt.AlignLeft)
         self.LV1.addWidget(self.buttoninst3, alignment=Qt.AlignLeft)
+        self.LV1.addWidget(self.edit3, alignment=Qt.AlignLeft)
         self.LV1.addWidget(self.buttonresult, alignment=Qt.AlignLeft)
 
         self.LV2 = QVBoxLayout()
