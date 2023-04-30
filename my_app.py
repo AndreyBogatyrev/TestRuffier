@@ -1,7 +1,7 @@
 from PyQt5.QtCore import Qt 
 from PyQt5.QtWidgets import QWidget, QLabel, QVBoxLayout,QPushButton, QApplication
 import instr as S
-from final_win import FinalWin
+from second_win import TestWin
 
 class MainWin(QWidget):
     def __init__(self):
@@ -31,7 +31,7 @@ class MainWin(QWidget):
 
     def next_click(self):
         self.hide()
-        self.tw = FinalWin(60, 14)
+        self.tw = TestWin()
 
 app = QApplication([])
 mw = MainWin()
