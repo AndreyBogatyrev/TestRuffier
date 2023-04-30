@@ -62,7 +62,11 @@ class TestWin(QWidget):
 
     def connection(self):
         self.buttonresult.clicked.connect(self.next_click)
+        self.editAge.editingFinished.connect(self.SetAge)
 
     def next_click(self):
         self.hide()
-        self.tw = FinalWin(60, 15)
+        self.tw = FinalWin(60, self.age)
+
+    def SetAge(self):
+        self.age = int(self.editAge.text())

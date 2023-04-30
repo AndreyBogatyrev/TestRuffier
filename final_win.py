@@ -32,10 +32,9 @@ class FinalWin(QWidget):
         self.move(S.win_x,S.win_y)
 
     def inituI(self):
-        self.index = QLabel(S.txt_index + str(self.Ruffie))
+        self.index = QLabel(S.txt_index + str(self.age))
         self.workheart = QLabel(S.txt_workheart + GetStatus(self.Ruffie, self.age))
         self.layout = QVBoxLayout()
         self.layout.addWidget(self.index, alignment=Qt.AlignCenter)
         self.layout.addWidget(self.workheart, alignment=Qt.AlignCenter)
         self.setLayout(self.layout)
-
