@@ -39,6 +39,7 @@ class TestWin(QWidget):
         self.edit2 = QLineEdit(S.txt_hinttest2)
         self.edit3 = QLineEdit(S.txt_hinttest3)
 
+
         self.LV1 = QVBoxLayout()
         self.LV1.addWidget(self.fioText, alignment=Qt.AlignLeft)
         self.LV1.addWidget(self.editName, alignment=Qt.AlignLeft)
@@ -62,6 +63,10 @@ class TestWin(QWidget):
         self.setLayout(main_line)
 
     def connection(self):
+        self.buttoninst1.clicked.connect(self.timer_test1)
+        self.buttoninst2.clicked.connect(self.timer_test2)
+        self.buttoninst3.clicked.connect(self.timer_test3)
+
         self.buttonresult.clicked.connect(self.next_click)
         self.buttoninst1.clicked.connect(self.test1)
         self.buttoninst2.clicked.connect(self.test2)
