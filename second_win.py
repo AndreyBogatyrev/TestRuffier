@@ -63,10 +63,6 @@ class TestWin(QWidget):
         self.setLayout(main_line)
 
     def connection(self):
-        self.buttoninst1.clicked.connect(self.timer_test1)
-        self.buttoninst2.clicked.connect(self.timer_test2)
-        self.buttoninst3.clicked.connect(self.timer_test3)
-
         self.buttonresult.clicked.connect(self.next_click)
         self.buttoninst1.clicked.connect(self.test1)
         self.buttoninst2.clicked.connect(self.test2)
