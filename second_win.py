@@ -78,7 +78,7 @@ class TestWin(QWidget):
 
     def next_click(self):
         self.hide()
-        self.tw = FinalWin(self.Name, self.age, self.edit1, self.edit2, self.edit3)
+        self.tw = FinalWin(self.Name, self.age, self.Res1 + self.Res2 + self.Res3)
 
     def SetAge(self):
         self.age = int(self.editAge.text())
