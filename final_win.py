@@ -18,7 +18,7 @@ def GetStatus(index, age):
 
 
 class FinalWin(QWidget):
-    def __init__(self, sumP, age):
+    def __init__(self, name, age, sumP):
         super().__init__()
         self.age = age
         self.Ruffie = (4*sumP-200)/10
@@ -32,7 +32,7 @@ class FinalWin(QWidget):
         self.move(S.win_x,S.win_y)
 
     def inituI(self):
-        self.index = QLabel(S.txt_index + str(self.age))
+        self.index = QLabel(S.txt_index+str(self.Ruffie))
         self.workheart = QLabel(S.txt_workheart + GetStatus(self.Ruffie, self.age))
         self.layout = QVBoxLayout()
         self.layout.addWidget(self.index, alignment=Qt.AlignCenter)

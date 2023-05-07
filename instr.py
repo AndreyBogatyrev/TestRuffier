@@ -26,7 +26,7 @@ txt_hinttest3 = '0'
 txt_starttest1 = 'Начать первый тест'
 txt_starttest2 = 'Начать делать приседания'
 txt_starttest3 = 'Начать финальный тест'
-txt_timer = ''
+txt_timer = '00:00:00'
 
 
 txt_age = 'Полных лет:'
