@@ -70,6 +70,7 @@ class TestWin(QWidget):
         self.buttoninst3.clicked.connect(self.timer_test3)
 
         self.buttonresult.clicked.connect(self.next_click)
+        self.editName.editingFinished.connect(self.SetName)
         self.editAge.editingFinished.connect(self.SetAge)
         self.edit1.editingFinished.connect(self.SetRes1)
         self.edit2.editingFinished.connect(self.SetRes2)
@@ -77,7 +78,7 @@ class TestWin(QWidget):
 
     def next_click(self):
         self.hide()
-        self.tw = FinalWin(self.age, self.edit1, self.edit2, self.edit3)
+        self.tw = FinalWin(self.Name, self.age, self.edit1, self.edit2, self.edit3)
 
     def SetAge(self):
         self.age = int(self.editAge.text())
@@ -87,6 +88,9 @@ class TestWin(QWidget):
         self.Res2 = int(self.edit2.text())
     def SetRes3(self):
         self.Res3 = int(self.edit3.text())
+    
+    def SetName(self):
+        self.Name = self.editName.text()
 
     def timer_test1(self):
         global time
